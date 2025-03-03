@@ -1,5 +1,6 @@
 :root{
     --bs-blue: #037BC0;
+    --bs-green: #8CBC00;
 }
 
 html{
@@ -12,6 +13,7 @@ body{
 }
 h1, h2, h3{
     font-family: "Playfair Display", serif;
+    font-weight: bold;
 }
 h1{
     font-size: 3.8rem;
@@ -21,8 +23,79 @@ h1{
         font-size: 5rem;
     }
 }
+h2{
+    font-size: 3.2rem;
+}
+@media (min-width: 768px) {
+    h1{
+        font-size: 4rem;
+    }
+}
+h2{
+    font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+    h1{
+        font-size: 3rem;
+    }
+}
 
 /* Reescribir colores */
-.text-primary{
+.text-primary,
+.nombre-sitio{
     color: var(--bs-blue) !important;
+}
+.btn-success{
+    background-color: var(--bs-green) !important;
+}
+.bg-primary, .btn-primary{
+    background-color: var(--bs-blue) !important;
+}
+
+.hero{
+    background-image: url(../img/principal.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+@media (min-width: 768px) {
+    .hero{
+        height: 45rem;
+    }
+}
+
+/* Productos */
+@media (min-width: 768px) {
+    .producto img{
+        height: 43rem;
+        width: 100%;
+        object-fit: cover;
+    }   
+}
+
+.categoria img{
+    transition: all .3s ease;
+}
+.categoria img:hover{
+    transform: scale(1.2);
+}
+
+/* Forma antigua */
+/* .galeria li{
+    margin-bottom: 1rem;
+}
+.galeria li:last-of-type{
+    margin-bottom: 0;
+} */
+
+/* Forma nueva */
+.galeria li:not(:last-of-type){
+    margin-bottom: 1rem;
+}
+
+.form-control{
+    padding: 1rem;
+    font-size: 1.6rem;
 }
